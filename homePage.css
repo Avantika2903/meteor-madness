@@ -1,0 +1,95 @@
+html,body,#cesiumContainer {
+  width: 100%;
+  height: 100%;
+  margin: 0; padding: 0; overflow: hidden;
+  font-family: system-ui, Arial, sans-serif;
+}
+
+#cesiumContainer { position: absolute; inset: 0; }
+
+#ui {
+  position: absolute;
+  z-index: 1000;
+  left: 12px;
+  top: 12px;
+  background: rgba(20,20,20,0.6);
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  width: 260px;
+  backdrop-filter: blur(4px);
+}
+
+#controls { display: flex; flex-direction: column; gap: 8px; padding: 5px;}
+
+#asteroidList {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 6px;
+  background: rgba(255,255,255,0.04);
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.asteroidItem {
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  display:flex; justify-content:space-between; gap:6px;
+}
+.asteroidItem:hover { background: rgba(255,255,255,0.04); }
+
+.asteroidItem.highlight { outline: 2px solid #ffd54f; background: rgba(255,255,255,0.06); }
+
+.badge { font-size: 12px; opacity: 0.85; }
+
+.impact-details {
+  background: rgba(255,255,255,0.03);
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.3;
+}
+.asteroid-item { margin-bottom: 6px; }
+
+#refreshBtn {
+  padding: 3px;
+  background-color: beige;
+  border-radius: 3px;
+  border: 1px;
+}
+
+#refreshBtn:hover { 
+  transition: 0.5s;
+  background-color: rgba(216, 212, 212, 0.89);
+}
+
+#clr-button{
+  padding: 3px;
+  background-color: beige;
+  border-radius: 3px;
+  border: 1px;
+}
+
+#clr-button:hover {
+  transition: 0.5s;
+  background-color: rgba(216, 212, 212, 0.89);
+}
+
+.impact-details:hover {
+  transition: 0.5s;
+  background-color: rgba(240, 248, 255, 0.189);
+}
+
+.detail-container:hover{
+  transition: 0.5s;
+  background-color: rgba(240, 248, 255, 0.105);
+}
+
+.detail-container{
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+

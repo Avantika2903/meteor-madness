@@ -1,0 +1,87 @@
+/* Remove default spacing from the page and set global font */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background image container */
+.Background-Image {
+    position: fixed;              /* Stays fixed in place even while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;                  /* Stretch full width */
+    height: 100%;                 /* Stretch full height */
+    background-image: url('flatEarthMap.jpg'); /* Corrected path */
+    background-size: cover;       /* Makes sure image covers the whole container */
+    background-position: center;  /* Centers the image */
+    z-index: -2;                  /* Places it behind all other content */
+}
+
+/* Semi-transparent black overlay */
+.Overlay {
+    position: absolute;           /* Stretches over the background image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Black with 70% transparency */
+    z-index: -1;                  /* Behind text but above image */
+}
+
+/* Welcome text container */
+.Welcome-Container {
+    position: relative;           /* Ensures it stacks above overlay */
+    max-width: 700px;             /* Keeps text from stretching too wide */
+    margin: 100px auto 0 auto;   /* Centers the text horizontally */
+    transform: translateX(-150px); /* Move it 150px to the left */
+    padding: 10px 20px;           /* Adds spacing inside the container */
+    color: rgba(245, 245, 245, 0.75);         /* White text for contrast on dark bg */
+    text-align: left;             /* Align all text to left */
+}
+
+#Welcome-Text {
+    font-size: 35px;              /* Large heading */
+    margin-top: 10px;
+    margin-bottom: 0px;           /* Space below heading */
+    font-weight: normal;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#SpacedWatch-Text {
+    font-size: 90px;              /* Subheading size */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+hr {
+    border: 1px solid rgb(231, 230, 230);      /* White horizontal line */
+    width: 100%;                               /* Full width */
+    margin: 20px 0;                            /* Spacing above and below line */
+}
+
+/* Button container */
+.Button-Container {
+    margin-top: 50px;              /* Space between text and button */
+    text-align: left;              /* Align with text */
+}
+
+/* Style the button */
+#Get-Started-Button {
+    padding: 10px 20px;
+    font-size: 10px;
+    font-weight: normal;
+    border: solid 2px rgb(4, 1, 82);
+    border-radius: 8px;
+    background: #093594;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+/* Hover effect */
+#Get-Started-Button:hover {
+    background: #041845;
+    size: 11px;                  /* Note: "size" property here does nothing; consider changing font-size */
+}
